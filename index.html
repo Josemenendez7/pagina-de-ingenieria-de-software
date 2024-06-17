@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foro de Autos</title>
+    <link rel="stylesheet" href="css/styes.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="imagenes/Logoc.png" alt="Logo de Auto">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar...">
+                <button type="submit">
+                    <img src="imagenes/lupa.png" alt="Buscar">
+                </button>
+            </div>
+            <ul class="menu">
+                <li><a href="#">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="#">Marcas</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Toyota</a></li>
+                        <li><a href="#">Ford</a></li>
+                        <li><a href="#">Chevrolet</a></li>
+                        <li><a href="#">BMW</a></li>
+                        <li><a href="#">Audi</a></li>
+                    </ul>
+                </li>
+                <li><a href="#novedades" class="smooth-scroll">Novedades</a></li>
+                <li><a href="#deportivos-atemporales" class="smooth-scroll">Deportivos Atemporales</a></li>
+                <li><a href="#mejores-pickups" class="smooth-scroll">Las Mejores Pick-Ups del Mercado</a></li>
+                <li><a href="#autos-prestigio" class="smooth-scroll">Autos de Prestigio</a></li>
+                <li><a href="#sobre-nosotros" class="smooth-scroll">Sobre Nosotros</a></li>
+                <li><a href="#contacto" class="smooth-scroll">Contacto</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Foro de Autos</h1>
+            <p>Discute y comparte sobre los mejores autos del mercado</p>
+        </section>
+        <section id="novedades" class="section-content">
+            <h2>Novedades</h2>
+            <div class="content-item">
+                <img src="imagenes/novedad1.jpeg" alt="Novedad 1">
+                <h3>El audi r8 deja de fabricarse</h3>
+                <p>El deportivo insignia de audi dejare de fabricarse</p>
+            </div>
+            
+        </section>
+        <section id="deportivos-atemporales" class="section-content">
+            <h2>Deportivos Atemporales</h2>
+            <div class="content-item">
+                <img src="imagenes/deportivo1.jpg" alt="Deportivo Atemporal 1">
+                <h3>deportivos a traves del tiempo</h3>
+                <p>Una mirada a los deportivos que han dejado huella a través del tiempo...</p>
+            </div>
+        </section>
+        <section id="mejores-pickups" class="section-content">
+            <h2>Las Mejores Pick-Ups del Mercado</h2>
+            <div class="content-item">
+                <img src="imagenes/pickup1.jpeg" alt="Mejor Pick-Up">
+                <h3>Pick-Up Sobresaliente</h3>
+                <p>Explora las mejores pick-ups disponibles en el mercado hoy en día...</p>
+            </div>
+        </section>
+        <section id="autos-prestigio" class="section-content">
+            <h2>Autos de Prestigio</h2>
+            <div class="content-item">
+                <img src="imagenes/prestigio1.jpg" alt="Auto de Prestigio">
+                <h3>Auto de Lujo</h3>
+                <p>Descubre los autos que representan lujo y prestigio en su máxima expresión...</p>
+            </div>
+        </section>
+        <section id="sobre-nosotros" class="sobre-nosotros">
+            <h2>Sobre Nosotros</h2>
+            <p>En Foro de Autos, nos apasiona todo lo relacionado con los autos. Nuestro foro es el lugar ideal para discutir sobre las últimas novedades, las mejores ediciones y las versiones especiales de los autos más increíbles del mercado.</p>
+        </section>
+        <section id="contacto" class="contacto">
+            <h2>Contacto</h2>
+            <p>Si tienes alguna pregunta o deseas más información sobre nuestro foro, no dudes en ponerte en contacto con nosotros. Puedes visitarnos en nuestra ubicación, llamarnos o enviarnos un correo electrónico.</p>
+            <ul>
+                <li><strong>Dirección:</strong> Comayagua, Comayagua, Honduras</li>
+                <li><strong>Teléfono:</strong> +504 98076562</li>
+                <li><strong>Email:</strong> contacto@foroautos.com</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <div class="redes-sociales">
+            <h2>Síguenos en</h2>
+            <ul>
+                <li><a href="#"><img src="imagenes/facebook.png" alt="Facebook"></a></li>
+                <li><a href="#"><img src="imagenes/twitter.png" alt="Twitter"></a></li>
+                <li><a href="#"><img src="imagenes/instagram.png" alt="Instagram"></a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        document.querySelectorAll('.smooth-scroll').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Toggle menu for mobile view
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            menu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
